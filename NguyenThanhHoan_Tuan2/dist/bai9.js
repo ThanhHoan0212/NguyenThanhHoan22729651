@@ -1,0 +1,9 @@
+"use strict";
+function filterPromise(arr) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(arr.filter((item) => item % 2 === 0));
+        }, 1000);
+    });
+}
+filterPromise([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).then((data) => console.log(data));
